@@ -28,16 +28,20 @@ class EstructurasControl{
         //para hacer una istancia , es necesario 1.- identificar el tipo de objeto 
         //2.- nombrar al objeto
         // 3.- crear al objreto
+        
         Scanner entrada = new Scanner(System.in);
         // crear una instancia del objeto de la entrada por defecto de la computadora 
         // vamos a identificar on scanner el tipo de dato que se esta instanceando
         //entrada es el objeto que va a poder identificar si es int, double,float etc
         // es declarar a la bariable que se va a utilizar en el programna 
         //n las variabled son de dos tipos global y local 
-        // si la declaro dentro de un metodo es lical 
-        int opcion , numbinario , total , cantidadproducto ,producto, num1, edad,positivos,negativos; 
-        float resultdo , compra = 0,temperatura,precio;
-        double f,k,r,c,area,base,altura,volumen,perimetro,radio,descuento=0;
+        // si la declaro dentro de un metodo es lical
+        @SuppressWarnings("unused")
+        int opcion , numbinario , total , cantidadproducto ,num1, edad,positivos =0,negativos= 0,num = 0,factorial=1,numero,producto; 
+        float resultdo= 0 , compra = 0,temperatura,precio;
+        @SuppressWarnings("unused")
+        double f,k,r,c,area,base,altura,volumen,perimetro,radio,descuento = 0,producto1;
+        @SuppressWarnings("unused")
         String nombreproducto,respuesta,nombres;
         String binario = "";
         char letra ;
@@ -171,28 +175,31 @@ System.out.println("el numero binario es: " + binario);
                         num1 = entrada.nextInt();
 
                         if (num1 > 0) {
-                            positivos++;
+                            positivos  ++;
                         } else {
-                            negativos++;
+                            negativos ++;
                         }
                     }
 
                     System.out.println("total de numero positivos: " + positivos);
                     System.out.println("totsl de numeros negativos: " + negativos);
-                    break;
+                    
 
     break;
+
     case 5:
     System.out.println(" Bienvenidos a la tiendita Kawaii");
     System.out.println(" Porfavor ingrese el numero de produtos que decea comprar");
     total=entrada.nextInt();
-    for(int i=1; i <= total; i++){
+    for(int l=1; l <= total; l++){
            System.out.println(" Ingrese el nombre del producto : ");
            nombreproducto = entrada.next();
            System.out.println(" Ingresa el precio: ");
            precio = entrada.nextFloat();
           System.out.println(" Ingrese la cantidad del producto: ");
-          producto = precio * cantidadproducto ;
+          cantidadproducto =entrada.nextInt(); 
+
+          producto1 = precio*cantidadproducto;
           compra = compra + resultdo;
     }
         System.out.println(" El total de la compra es: " + compra );
@@ -260,14 +267,79 @@ System.out.println("el numero binario es: " + binario);
 
     break;
     case 7:
+ System.out.println("buenvebido a la,tabla de valores .");
+
+
+    
     break;
     case 8:
+     System.out.println("Factorial de un numero ");
+     System.out.println("Igrese un numero para calcular su factorial ");
+     numero = entrada.nextInt();
+     while (numero != 0){
+        for (int i=1; i<=num; i++){
+            factorial *= factorial;
+        }
+        System.out.println();
+     } 
+      System.out.println("el factorial de " + numero + " es "+ factorial);
+
+
+
     break;
     case 9:
+    System.out.println(" cuadrado");
+    System.out.println(" ingrese el lado de un cuadreado para obtener su imagen ");
+    num = entrada.nextInt();
+    if (num>=0 && num<20){
+        for(int i = 0; i<num; i++){
+            System.out.println("*");
+        }
+        System.out.println();// salto de linea 
+
+
+    }else{
+        System.out.println(" solo numeros de 1 a 20");
+    }
     break;
     case 10:
+     System.out.println(" cuadrado");
+    System.out.println(" ingrese el lado de un cuadreado para obtener su imagen ");
+    num = entrada.nextInt();
+    if (num>=0 && num<20){
+        for(int i = 0; i<num; i++){
+            System.out.println("*");
+        }
+        System.out.println();// salto de linea 
+for(int i=0; i<num-2; i++){
+    System.out.println( "*");
+    for(int j =0; j < num-2; j++){
+        System.out.println(" ");
+    }
+    System.out.println("*");
+}
+
+        for(int i = 0; i<num; i++){
+            System.out.println("*");
+        }
+
+    }else{
+        System.out.println(" solo numeros de 1 a 20");
+    }
     break;
     case 11:
+    System.out.println(" patron de codigo");
+    System.out.println(" ingrese un numeropara obtemer un patron");
+    num = entrada.nextInt();
+ if (num>=0 && num<20){
+    for(int i = 0; i<num; i++){
+            System.out.println("*");
+        }//salto de linea
+        System.out.println();
+
+
+    
+ }
     break;
     case 12:
     break;
