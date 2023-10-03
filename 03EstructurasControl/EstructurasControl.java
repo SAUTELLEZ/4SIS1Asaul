@@ -267,7 +267,13 @@ System.out.println("el numero binario es: " + binario);
 
     break;
     case 7:
- System.out.println("buenvebido a la,tabla de valores .");
+    //bamos a imprimir una tabla
+    //
+
+ 
+ for (int n = 1; n <= 10; n ++){
+    System.out.println(n + " " + (n*10) + " " +(n*100) + " " + (n*1000) +"");
+ }
 
 
     
@@ -288,60 +294,93 @@ System.out.println("el numero binario es: " + binario);
 
     break;
     case 9:
-    System.out.println(" cuadrado");
-    System.out.println(" ingrese el lado de un cuadreado para obtener su imagen ");
+    System.out.println(" cuadrado magico");
+    System.out.println(" ingrese el tamaño del cuadrado a pintar ");
     num = entrada.nextInt();
-    if (num>=0 && num<20){
-        for(int i = 0; i<num; i++){
-            System.out.println("*");
+    if (num>=1 && num<20){
+        //ciclo de filas
+        for(int i = 1; i<=num; i++){
+            //columnas
+            for (int j =1; j <=num; j++){
+                 System.out.print("*");
+
+            }
+           System.out.println("");// salto de linea 
         }
-        System.out.println();// salto de linea 
-
-
+        
     }else{
         System.out.println(" solo numeros de 1 a 20");
     }
     break;
     case 10:
-     System.out.println(" cuadrado");
+     System.out.println(" cuadrado hueco");
     System.out.println(" ingrese el lado de un cuadreado para obtener su imagen ");
     num = entrada.nextInt();
-    if (num>=0 && num<20){
-        for(int i = 0; i<num; i++){
-            System.out.println("*");
-        }
-        System.out.println();// salto de linea 
-for(int i=0; i<num-2; i++){
-    System.out.println( "*");
-    for(int j =0; j < num-2; j++){
-        System.out.println(" ");
-    }
-    System.out.println("*");
-}
+    if (num>=1 && num<20){
+        //filas
+        for(int i = 1; i<=num; i++){
+         System.out.print("*");
+         }
+         System.out.println();
+         //centro
+         for(int i = 1; i<=num-2; i++){
+            System.out.print("*");
+         for(int j = 1; j<=num-2; j++){
 
-        for(int i = 0; i<num; i++){
-            System.out.println("*");
-        }
-
-    }else{
+         System.out.print(" ");
+         }
+          System.out.println("*");
+         }
+         
+         //columnas
+         for (int j =1; j <=num; j++){
+        System.out.print("*");
+           
+         } 
+         
+        }else{
         System.out.println(" solo numeros de 1 a 20");
     }
     break;
     case 11:
     System.out.println(" patron de codigo");
-    System.out.println(" ingrese un numeropara obtemer un patron");
+    System.out.println(" ingrese un numero para obtemer un patron");
     num = entrada.nextInt();
- if (num>=0 && num<20){
-    for(int i = 0; i<num; i++){
+ for(int i=1; i <=num ;i ++){
+    for(int x = 1; x<= num; x++){
+        if ( (i + x)% 2 == 0){
             System.out.println("*");
-        }//salto de linea
-        System.out.println();
-
-
-    
+        }else { System.out.print("");
+    }
+    }
+    System.out.println();
  }
+ 
     break;
     case 12:
+    System.out.println(" diamante");
+    System.out.println("ingrese un numero para el tamaño que lo decees");
+num = entrada.nextInt();
+for(int i = 0 ; i < num; i ++){
+for(int j=num-1-i; j>= 0; j --){
+    System.out.print(" ");
+}
+for(int j= 0; j <= i; j++){
+    System.out.print(" *");
+}
+System.out.println("");
+}
+
+for(int i = 0 ; i < num; i++){//filas
+    for(int j =0; j <=i; j++){//columnas
+        System.out.print(" ");
+    }
+   for(int j = num -1-i; j>=0; j--){
+    System.out.print(" *");
+   }
+   System.out.println("");
+}
+
     break;
     case 13:
     break;
