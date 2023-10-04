@@ -383,8 +383,27 @@ for(int i = 0 ; i < num; i++){//filas
 
     break;
     case 13:
+    int n;
+        System.out.println("Ingrese el número de filas que desea imprimir: ");
+        n = entrada.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= 8; j++) {
+                if (i % 2 == 0) {
+                if (j == 1) {
+                    System.out.print(" ");
+                    System.out.print("*");
+                } else {
+                    System.out.print("*");
+                }
+                } else {
+                System.out.print("*");
+                }
+            }
+            System.out.println("");
+        }
     break;
     case 14:
+    
     break;
     default:
     System.out.println(" elija una opcion valida ");
