@@ -19,7 +19,7 @@ public class ArreglosMatriz {
         System.out.println(" ingresa el valor de la posiscion del arreglo");
         arreglo[i] = entrada.nextInt();
 
-    }
+    
     // para saber que almacenamos
     for(int j = 0 ; j < arreglo.length; j++);
         System.out.println(" El valor almacenado es :" + arreglo[j] + "valor");
