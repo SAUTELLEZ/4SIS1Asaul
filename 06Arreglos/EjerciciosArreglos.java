@@ -8,7 +8,7 @@ public class EjerciciosArreglos{
         Scanner entrada = new Scanner(System.in);
         int arreglo[] = new int [10];
 
-    int opcion,par,sumapares,numeromayor =0 ,numeromenor =0,calificacionsuperior =0,
+    int opcion,par,sumapares,numeromayor =0 ,numeromenor =0,calificacionsuperior=0 ,
      reprovado = 0,calificacion=6;
    char letra;
    
@@ -83,12 +83,15 @@ public class EjerciciosArreglos{
                 
                    if ( arreglo[i]>promedio){
                     calificacionsuperior=arreglo[i];
+
                    } 
+                   for (int j=0 ; j< promedio; j ++);
                    //alumnos reprovados
                    if (arreglo[i]<=calificacion){
                     for(int j = 0 ; j < calificacion; j++);
                     calificacion= arreglo[i];
                    }
+                
                 
                
                
@@ -97,7 +100,7 @@ public class EjerciciosArreglos{
         System.out.println(" calificaciones  :"    );  
 System.out.println(" el promedio es :" + promedio);
               System.out.println("calificacion mas alta :"  +numeromayor +" calificacion mas baja :"+ numeromenor);
-              System.out.println("calificaciones superiores al promedio es :"+ calificacionsuperior);
+              System.out.println("calificaciones superiores al promedio es :"+ arreglo[j]);
                System.out.println("alumnos reprobados "+ calificacion +" alumnos aprobados ");
     
      
