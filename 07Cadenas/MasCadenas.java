@@ -2,7 +2,7 @@ import java.util.*;
 public class MasCadenas {
     Scanner entrada = new Scanner(System.in);
     public void masFuncionescadenas(){
-        String s1 = new String(" hola habia ubna vez un patoto");
+        String s1 = new String(" hola habia ubna vez un patito");
         String s2 = " harry popote es magico";
          String s3 = " Feliz no cumpleaños";
           String s4= " FELIZ NO CUMPLEAÑOS";

@@ -4,8 +4,9 @@ public class Principal{
         // CadenaInvertida invertida = new CadenaInvertida();
           //objcadena.cadenas();
         // invertida.CadenaInvertidaPalabras();
-        MasCadenas operaciones = new MasCadenas();
-        operaciones.masFuncionescadenas();
-      
+        //MasCadenas operaciones = new MasCadenas();
+       //operaciones.masFuncionescadenas();
+     palindromo objpalindromo = new palindromo();
+     objpalindromo.espalindromo();
     }
 } 
