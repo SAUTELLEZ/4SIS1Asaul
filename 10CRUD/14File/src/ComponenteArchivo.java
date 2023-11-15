@@ -102,7 +102,7 @@ public class ComponenteArchivo {
         }catch (Exception ex){
     }
 
-    private String abrirArcchivo()  throws Exception{
+    private String abrirArcchivo()  throws Exception {
         //necesitamos poder abrir el archivo
         String aux = "";
         texto = "";
@@ -117,23 +117,27 @@ public class ComponenteArchivo {
             System.out.println(abre.getAbsoluteFile());
             System.out.println(abre.getAbsolutePath());
             System.out.println(abre.getPath());
-            
+        }
             try {
                 //comando para que ejecute el archivo
-            }catch (IOException ioe){
+            }catch (Exception ioe){
                 
                 //ya valio 
                 System.out.println("Error feo" + ioe.getMessage());
             }
+        String abre = null;
                 Runtime.getRuntime().exec("cmd / c start " + abre);
+        
             }
             if(abre!=null){
                 //vamos a ocupar un buffer para recorrer los elementos del archivo
                 FileReader archivos = new FileReader(abre);
                 BufferedReader lee = new BufferedReader(archivos);
+        String aux;
                 
                 //como no sabesmos cuanta informacion tiene ocupamos un while
-        while ((aux = lee.readLine()) !=null){
+        while ((aux = lee.readLine()) != null){
+            System.out.println("hola");
             texto += aux +"/n";
         }
         lee.close();
@@ -145,6 +149,8 @@ public class ComponenteArchivo {
             
         }
         return texto;
+
+    pr
             
         }
         
@@ -182,31 +188,16 @@ public class ComponenteArchivo {
     }  
         
         
-    private Container getContentPane() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+  
 
-    private void setTitle(String ventana_de_JFileChooser) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setSize(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setLocationRelativeTo(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setDefaultCloseOperation(int EXIT_ON_CLOSE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
+   
+   
    
 
    
 
     
+
     }
 
     
