@@ -1,0 +1,107 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Control;
+
+/**
+ *
+ * @author Telle
+ */
+
+import java.io.*;
+import java.util.*;
+import java.swing.*;
+import javax.swing.JOptionPane;
+public class Funciones {
+    //bamos a crear una lista de personas para regidtrar
+    ArrayList<Persona>Listapersonas=new ArrayList();
+    
+    //VARIABLES
+    String rep ="si";
+    String nombre = "";
+    // aqui viene donde aplicamos el polimorfismo
+    //ya que vamos a transformar una persona
+    
+    Persona profesor = new Profesor();
+    Persona alumno = new Alumno();
+    private int num_;
+    
+    void menu(){
+        while (true){
+            while(rep.equalsIgnoreCase("si")){
+                try{
+                    String var = JOptionPane.showInputDialog(
+                            "ingrese la opcion deceada : \n"
+                    + "1.- Registrar nuevo Profesor\n"
+                    + " 2.- Registrar nuevo Alumno\n"
+                    + " 3.- Registrar Alumno\n" );
+                    if (var == null){
+                        System.exit(0);
+                 }
+                    int opcion = Integer.parseInt(var);
+                    switch (opcion){
+                        case 1:
+                            //metodo para solicitar datos
+                            PedirDatosProfesor();
+                            //se los asigno aun objeto profesor 
+                           profesor = new Profesor(num_empleado , nombre, edad);
+                            //metodo para guardarlo 
+                            guardarProfesor();
+                            
+                            break;
+                        case 2:
+                             //metodo para solicitar datos
+                            PedirDatosAlumno();
+                            //se los asigno aun objeto profesor 
+                           profesor = new Alumno(bol, nombre, edad);
+                            //metodo para guardarlo 
+                            guardarAlumno();
+                            break;
+                            
+                        case 3:
+                            //metodo para leer el archivo de alumnos 
+                            leerAlumno();
+                            break;
+                            
+                        default:
+                            System.out.println("Opcion no valida");
+                    }
+                    rep = JOptionPane.showInputDialog("Deseas Repetir");
+                    
+                }catch(Exception e){
+                    System.out.println("Error :" + e.getMessage());
+                }
+            }
+        }
+    }
+
+    private void PedirDatosProfesor() {
+      num_empleado= Iteger.parseInt(JOptionPane.showInputDialog(""
+              + "ingresa el numero de empleado del profesor "))   ;
+      nombre = JOptionPane.showInputDialog("ingresa el nombre del profesor");
+      
+    }
+
+    private void guardarProfesor() {
+      
+    }
+
+    private void PedirDatosAlumno() {
+       
+    }
+
+    private void guardarAlumno() {
+      
+    }
+
+    private void leerAlumno() {
+     
+    }
+    
+    
+}
+
+   
+
+   

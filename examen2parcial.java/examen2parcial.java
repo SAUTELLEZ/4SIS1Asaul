@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.xml.parsers.DocumentBuilder;
+
 import java.awt.PdfWriter;
 
 
@@ -115,7 +117,7 @@ public class examen2parcial {
         String tex=jtxcont.getText();
         try{
       FileOutputStream archivo = new FileOutputStream(d +".pdf");
-      Document doc = new Document();
+      DocumentBuilder doc = new Document();
       PdfWriter.getInside(doc,archivo);
       doc.open();
       doc.add(new paragraph(text));
@@ -230,4 +232,5 @@ class Registro {
     public String toString() {
         return "Nombre: " + nombre + " " + apellidoPaterno + " " + apellidoMaterno + ", Edad: " + edad + ", Fecha Entrada: "
                 + fechaEntrada + ", Hora Entrada: " + horaEntrada + ", Hora Salida: " + horaSalida;
+    }
     }
