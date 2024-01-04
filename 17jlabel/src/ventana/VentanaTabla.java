@@ -42,6 +42,7 @@ public class VentanaTabla  extends JFrame implements MouseListener {
         
         
     }
+    
     private void iniciarComponentes() {
      contentPanel = new JPanel();
      contentPanel.setBorder(new EmptyBorder(5,5,5,5));

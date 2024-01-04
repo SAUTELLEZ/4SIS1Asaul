@@ -4,6 +4,8 @@
  */
 package examenfinal;
 
+import ventana.ventanita;
+
 /**
  *
  * @author Telle
@@ -15,8 +17,8 @@ public class Examenfinal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-          VentanaTabla ventanita = new VentanaTabla();
-        ventanita.setVisible(true);
+          ventanita ventanix = new ventanita();
+        ventanix.setVisible(true);
     }
     
 }
